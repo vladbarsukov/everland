@@ -1,0 +1,28 @@
+.sub-menu {
+  max-width: 1440px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 259px 320px 243px 243px;
+  justify-content: space-between;
+}
+
+.sub-menu_hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .sub-menu {
+    grid-template-columns: 213px 217px 196px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .sub-menu {
+    grid-template-columns: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 12px;
+  }
+}
