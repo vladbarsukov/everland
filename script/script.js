@@ -41,9 +41,11 @@ const header = document.querySelector('.header')
 const subMenuHidden = document.querySelector('.sub-menu_hidden')
 const subMenuBtn = document.querySelector('#menuBtn')
 const subMenu = document.querySelector('.sub-menu')
+const MenuIcon = document.querySelector('.header__menu-icon')
 
 const toggleMenu = function () {
   subMenuHidden.classList.toggle("sub-menu_hidden");
+  MenuIcon.classList.toggle("header__menu-icon_close");
 }
 
 subMenuBtn.addEventListener("click", function (e) {
@@ -62,9 +64,9 @@ document.addEventListener("click", function (e) {
   }
 });
 
+//Аккорденон мобилный
 
-
-
+const column = document.querySelector('.sub-menu__column')
 
 
 // Слайдер с анимациями
@@ -112,18 +114,43 @@ btnNext.addEventListener('click', clickSliderHandlerNext);
 
 
 
+//СЛАЙДЕР БЕЗ АНИМАЦИИ
+
 
 /*
+
+const items = document.querySelectorAll('.about__slider-item');
+const btnPrev = document.querySelector('#btnPrev');
+const btnNext = document.querySelector('#btnNext');
+let btnPagination =  document.querySelector('#pagination');
+let savedIndex = 0;
+
 const clickSliderHandler = (operation) => {
+
   !function calcSlide() {
+
     savedIndex = operation === 'plus' ? savedIndex += 1 : savedIndex -= 1;
+
     savedIndex = items.length === savedIndex ? 0 : savedIndex;
+
     savedIndex = savedIndex < 0 ? items.length - 1 : savedIndex;
+
     items.forEach(el => el.classList.remove('block'));
+
     items[savedIndex].classList.add('block');
+
   }();
+
   !function printPagination() {
     btnPagination.textContent = `${savedIndex + 1}/${items.length}`;
   }();
+
 };
+
+
+
+btnNext.addEventListener('click', () => {clickSliderHandler('plus')});
+btnPrev.addEventListener('click', clickSliderHandler);
+
 */
+
