@@ -37,9 +37,13 @@
   }
 }
 
-.sub-menu__column-links-hide {
-  display: none;
+@media screen and (max-width: 730px) {
+  .sub-menu__column-links_hide {
+    display: none;
+  }
 }
+
+
 
 
 
