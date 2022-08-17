@@ -63,9 +63,31 @@ document.addEventListener("click", function (e) {
 });
 
 
+<<<<<<< Updated upstream
 
 
 
+=======
+//Аккорденон мобилный
+
+const column = document.querySelectorAll('.sub-menu__column-links')
+const titleBtn = document.querySelectorAll('.sub-menu__title')
+
+
+
+
+function click () {
+  titleBtn.forEach(() => this.nextElementSibling.classList.toggle("sub-menu__column-links_hide"));
+}
+
+titleBtn.forEach(e => {
+  e.addEventListener('click', click)
+
+})
+
+
+
+>>>>>>> Stashed changes
 
 // Слайдер с анимациями
 const items = document.querySelectorAll('.about__slider-item');
