@@ -37,7 +37,9 @@
   }
 }
 
-
+.sub-menu__column-links-hide {
+  display: none;
+}
 
 
 
