@@ -11,7 +11,7 @@
   max-width: 1440px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1250px) {
   .about {
     padding-top: 56px;
     max-width: 768px;
@@ -31,14 +31,13 @@
 }
 
 .about__slider-track {
-position: relative;
+  position: relative;
 }
 
 .about__slider-item {
   position: absolute;
   min-width: 100%;
-  display: none;
-
+  opacity: 0;
 }
 
 @media screen and (max-width: 1250px) {
@@ -54,5 +53,20 @@ position: relative;
 }
 
 .block {
-  display: block;
+  opacity: 1;
+  animation: showRight .5s;
+}
+.block_prev {
+  opacity: 1;
+  animation: showLeft .5s;
+}
+
+@keyframes showRight {
+  from {right:-100%;}
+  to {right:0;}
+}
+
+@keyframes showLeft {
+  from {left:-100%;}
+  to {left:0;}
 }
