@@ -64,9 +64,27 @@ document.addEventListener("click", function (e) {
   }
 });
 
+
 //Аккорденон мобилный
 
-const column = document.querySelector('.sub-menu__column')
+const column = document.querySelectorAll('.sub-menu__column-links')
+const titleBtn = document.querySelectorAll('.sub-menu__title')
+function click (e) {
+  console.log(e)
+  console.log(e.currentTarget, e.target)
+}
+
+
+
+function clicks () {
+  column.forEach(el => el.classList.toggle("sub-menu__column-links_hide"));
+}
+
+titleBtn.forEach(e => {
+  e.addEventListener('click', clicks)
+})
+
+document.addEventListener('click', click)
 
 
 // Слайдер с анимациями
