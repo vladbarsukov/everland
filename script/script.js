@@ -42,10 +42,15 @@ const subMenuHidden = document.querySelector('.sub-menu_hidden')
 const subMenuBtn = document.querySelector('#menuBtn')
 const subMenu = document.querySelector('.sub-menu')
 const MenuIcon = document.querySelector('.header__menu-icon')
+const column = document.querySelectorAll('.sub-menu__column-links')
+const columnIcon = document.querySelectorAll('.sub-menu__title-icon')
+
 
 const toggleMenu = function () {
   subMenuHidden.classList.toggle("sub-menu_hidden");
   MenuIcon.classList.toggle("header__menu-icon_close");
+  column.forEach((e) => e.classList.add("sub-menu__column-links_hide"));
+  columnIcon.forEach((e) => e.classList.remove("sub-menu__title-icon_hide"));
 }
 
 subMenuBtn.addEventListener("click", function (e) {
@@ -67,7 +72,6 @@ document.addEventListener("click", function (e) {
 
 //Аккорденон мобилный
 
-const column = document.querySelectorAll('.sub-menu__column-links')
 const titleBtn = document.querySelectorAll('.sub-menu__title')
 
 
