@@ -1,39 +1,3 @@
-/*
-
-const items = document.querySelectorAll('.about__slider-item');
-const btnPrev = document.querySelector('#btnPrev');
-const btnNext = document.querySelector('#btnNext');
-const switcher = document.querySelectorAll('.about__switcher-text');
-let i = 0;
-
-
-btnNext.addEventListener('click', () => {
-  ++i;
-  if (i >= items.length) {
-    items[i-1].classList.remove("block");
-    i = 0;
-    items[i].classList.add("block");
-  } else {
-    items[i-1].classList.remove("block");
-    items[i].classList.add("block");
-  }
-});
-
-btnPrev.addEventListener('click', () => {
-  --i;
-  if (i >= items.length) {
-    items[i+1].classList.remove("block");
-    i = 0;
-    items[i].classList.add("block");
-  } else {
-    items[i+1].classList.remove("block");
-    items[i].classList.add("block");
-  }
-
-});
-*/
-
-
 
 //Шторка меню
 
@@ -69,13 +33,9 @@ document.addEventListener("click", function (e) {
   }
 });
 
-
 //Аккорденон мобилный
 
 const titleBtn = document.querySelectorAll('.sub-menu__title')
-
-
-
 
 function click () {
   titleBtn.forEach(() => this.parentElement.nextElementSibling.classList.toggle("sub-menu__column-links_hide"));
@@ -87,16 +47,13 @@ titleBtn.forEach(e => {
   e.addEventListener('click', click)
 })
 
-
-
-
 // Слайдер с анимациями
+
 const items = document.querySelectorAll('.about__slider-item');
 const btnPrev = document.querySelector('#btnPrev');
 const btnNext = document.querySelector('#btnNext');
 // счетчик
 let btnPagination =  document.querySelector('#pagination');
-
 let savedIndex = 0;
 
 function printPagination() {
@@ -106,17 +63,17 @@ function printPagination() {
 function calcSlideNext() {
   savedIndex = savedIndex += 1
   savedIndex = items.length === savedIndex ? 0 : savedIndex;
-  items.forEach(el => el.classList.remove('block'));
-  items.forEach(el => el.classList.remove('block_prev'));
-  items[savedIndex].classList.add('block');
+  items.forEach(el => el.classList.remove('about__slider-item_next'));
+  items.forEach(el => el.classList.remove('about__switcher-button_prev'));
+  items[savedIndex].classList.add('about__slider-item_next');
 }
 
 function calcSlidePrev() {
   savedIndex = savedIndex -= 1
   savedIndex = savedIndex < 0 ? items.length - 1 : savedIndex;
-  items.forEach(el => el.classList.remove('block_prev'));
-  items.forEach(el => el.classList.remove('block'));
-  items[savedIndex].classList.add('block_prev');
+  items.forEach(el => el.classList.remove('about__switcher-button_prev'));
+  items.forEach(el => el.classList.remove('about__slider-item_next'));
+  items[savedIndex].classList.add('about__switcher-button_prev');
 }
 
 const clickSliderHandlerNext = () => {
@@ -133,8 +90,6 @@ const clickSliderHandlerPrev = () => {
 btnPrev.addEventListener('click', clickSliderHandlerPrev);
 btnNext.addEventListener('click', clickSliderHandlerNext);
 
-
-
 //СЛАЙДЕР БЕЗ АНИМАЦИИ
 
 
@@ -149,15 +104,10 @@ let savedIndex = 0;
 const clickSliderHandler = (operation) => {
 
   !function calcSlide() {
-
     savedIndex = operation === 'plus' ? savedIndex += 1 : savedIndex -= 1;
-
     savedIndex = items.length === savedIndex ? 0 : savedIndex;
-
     savedIndex = savedIndex < 0 ? items.length - 1 : savedIndex;
-
     items.forEach(el => el.classList.remove('block'));
-
     items[savedIndex].classList.add('block');
 
   }();
@@ -165,13 +115,9 @@ const clickSliderHandler = (operation) => {
   !function printPagination() {
     btnPagination.textContent = `${savedIndex + 1}/${items.length}`;
   }();
-
 };
-
-
 
 btnNext.addEventListener('click', () => {clickSliderHandler('plus')});
 btnPrev.addEventListener('click', clickSliderHandler);
 
 */
-

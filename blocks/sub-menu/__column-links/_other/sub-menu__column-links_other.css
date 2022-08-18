@@ -2,7 +2,6 @@
   padding-top: 0;
 }
 
-
 @media screen and (max-width: 1250px) {
   .sub-menu__column-links_other {
     display: grid;

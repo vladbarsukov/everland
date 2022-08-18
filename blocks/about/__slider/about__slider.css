@@ -23,7 +23,6 @@
   .about__slider {
     width: 95px;
     height: 24px;
-
-  left: calc(50% - 47.5px);
+    left: calc(50% - 47.5px);
   }
 }
