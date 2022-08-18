@@ -30,10 +30,9 @@
 @media screen and (max-width: 730px) {
   .sub-menu {
     grid-template-columns: 300px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 12px;
     width: calc(100% - 20px);
+    top: 72px;
+    padding: 0px 10px 85px;
   }
 }
 

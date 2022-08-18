@@ -74,7 +74,9 @@ const titleBtn = document.querySelectorAll('.sub-menu__title')
 
 
 function click () {
-  titleBtn.forEach(() => this.nextElementSibling.classList.toggle("sub-menu__column-links_hide"));
+  titleBtn.forEach(() => this.parentElement.nextElementSibling.classList.toggle("sub-menu__column-links_hide"));
+  titleBtn.forEach(() => this.nextElementSibling.classList.toggle("sub-menu__title-icon_hide"));
+  console.log(this)
 }
 
 titleBtn.forEach(e => {

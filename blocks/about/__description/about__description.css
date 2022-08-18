@@ -26,5 +26,6 @@
 @media screen and (max-width: 730px) {
   .about__description {
     font-size: 14px;
+    min-width: 300px;
   }
 }
